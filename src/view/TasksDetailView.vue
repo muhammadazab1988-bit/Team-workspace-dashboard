@@ -29,12 +29,17 @@ onMounted(async () => {
 </script>
 
 <template>
-  <router-link to="/tasks">← Back to tasks</router-link>
+  <router-link class="text-blue-500 hover:underline" to="/tasks"
+    >← Back to tasks</router-link
+  >
 
   <StateMessage :loading="loading" :error="error" />
 
-  <div v-if="task && user">
-    <h1>{{ task.title }}</h1>
+  <div
+    v-if="task && user"
+    class="flex flex-col gap-3 bg-gray-200 shadow rounded-2xl font-bold"
+  >
+    <h1 class="text-xl font-bold">{{ task.title }}</h1>
     <p>Status: {{ task.completed ? "Completed" : "Pending" }}</p>
     <p>Assigned to: {{ user.name }} ({{ user.email }})</p>
   </div>
