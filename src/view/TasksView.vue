@@ -2,6 +2,7 @@
 import { ref, computed, onMounted } from "vue";
 import api from "../api/axios.js";
 import StateMessage from "../components/StateMessage.vue";
+import '../style.css';
 
 const todos = ref([]);
 const users = ref([]);
@@ -103,9 +104,10 @@ onMounted(async () => {
     </span>
   </div>
 
-  <button
+  <button 
     v-if="visibleCount < filteredTodos.length"
     @click="visibleCount += 20"
+    class="btn btn-primary mt-4"
   >
     Load More
   </button>

@@ -46,7 +46,7 @@ onMounted(async () => {
         class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg shadow-slate-200/60"
       >
         <header
-          class="bg-gradient-to-r from-green-600 via-red-600 to-green-600 px-5 py-6 sm:px-8 sm:py-8"
+          class="bg-linear-to-r from-green-600 via-red-600 to-green-600 px-5 py-6 sm:px-8 sm:py-8"
         >
           <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
             <div
